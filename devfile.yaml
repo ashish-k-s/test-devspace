@@ -1,0 +1,35 @@
+schemaVersion: 2.1.0
+metadata:
+  generateName: DO288-
+components:
+  - name: tools
+    container:
+      image: quay.io/redhattraining/curriculum-devtools:0.0.3
+      memoryLimit: 2G
+      command: ['sleep', 'infinity']
+      mountSources: true
+      volumeMounts:
+      - name: jcache
+        path: /home/jboss/.jbang/cache
+
+  - name: flamel
+    container:
+      image: quay.io/redhattraining/flamel:latest
+      mountSources: true
+      memoryLimit: 1G
+      command: ['sleep', 'infinity']
+
+  - name: jcache
+    volume:
+      size: 2Gi
+
+commands:
+  - id: build-sg
+    exec:
+      label: "Build Student Guide"
+      component: flamel
+      workingDir: "${PROJECT_SOURCE}/guides"
+      commandLine: "flamel clean && flamel sg"
+      group:
+        kind: build
+        isDefault: true
