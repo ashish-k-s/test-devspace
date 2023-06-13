@@ -1,0 +1,318 @@
+---
+# yaml-language-server: $schema=dco.schema.json
+dco:
+  bookinfo:
+    sku: DO288
+    title: 'Red{nbsp}Hat OpenShift Developer II: Building Kubernetes Applications'
+    product_number: '4.12'
+    description: 'Red{nbsp}Hat OpenShift Container Platform, which is based on container technology and Kubernetes, provides developers with an enterprise-ready solution for developing and deploying containerized software applications.
+
+      _Red{nbsp}Hat OpenShift Development II: Building Kubernetes Applications_ (DO288), the second course in the OpenShift development track, teaches students how to design, build, and deploy containerized software applications on an OpenShift cluster. Whether writing native container applications or migrating existing applications, this course provides hands-on training to boost developer productivity powered by Red{nbsp}Hat OpenShift Container Platform.'
+    product_name: OCP
+    edition: 1
+    edition_date: 20220915
+    publication_date: 20220915
+    objectives:
+    - Design, build, and deploy containerized applications on an OpenShift cluster.
+    prerequisites:
+    - Either have completed the _Introduction to Containers, Kubernetes, and Red{nbsp}Hat OpenShift_ course (DO180), or have equivalent knowledge.
+    - RHCSA or higher is helpful for navigation and usage of the command line, but it is not required.
+    audience:
+    - Software Developers
+    - Software Architects
+    architects:
+    - Ravishankar Srinivasan
+    authors:
+    - Richard Allred
+    - Ricardo Jun
+    - Ravishankar Srinivasan
+    - Fernando Lozano
+    - Ivan Chavero
+    - Dan Kolepp
+    - Jordi Sola Alaball
+    - Manuel Aude Morales
+    - Eduardo Ramírez Martínez
+    - Guy Bianco
+    - Randy Thomas
+    - Marek Czernek
+    - Michael Jarrett
+    - Alex Corcoles
+    - Wasim Raja
+    - Sourabh Mishra
+    - Christopher Caillouet
+    editors:
+    - Sam Ffrench
+    contributors:
+    - Grega Bremec
+    - Sajith Sugathan
+    - Dave Sacco
+    - Rob Locke
+    - Bowe Strickland
+    - Rudolf Kastl
+    - Chris Tusa
+    - Joel Birchler
+    - Chetan Tiwary
+  introduction:
+    orientation: true
+    control: true
+    perform: true
+    topics:
+    - keyword: appendix-git
+      title: Creating a GitHub Account
+      sections:
+      - type: lecture
+        title: Creating a GitHub Account
+        objectives:
+        - Create a GitHub account and create public Git repositories.
+    - keyword: appendix-quay
+      title: Creating a Quay Account
+      sections:
+      - type: lecture
+        title: Creating a Quay Account
+        objectives:
+        - Create a Quay account and use an encrypted password for the labs in the course which require Quay.io access.
+    - keyword: appendix-git-helper
+      title: Git Commands
+      sections:
+      - type: lecture
+        title: Git Commands
+        objectives:
+        - Restart and redo exercises in this course. You should also be able to switch from one incomplete exercise to perform another, and later continue the previous exercise where you left off.
+
+  chapters:
+  # CH01
+  - keyword: architecture
+    repository: git@github.com:RedHatTraining/module-openshift-dev-intro.git
+    revision: main # TODO Use a version-specific tag
+    remoteChapter: architecture
+  # CH02
+  - keyword: deploy
+    repository: git@github.com:RedHatTraining/module-openshift-dev-deploy.git
+    revision: main # TODO Use a version-specific tag
+    remoteChapter: deploy
+  # CH03
+  - keyword: images
+    title: Building and Publishing Container Images
+    goal: Build, deploy, and manage the lifecycle of container images by using a container registry.
+    objectives:
+      - Build Container Images for Red{nbsp}Hat OpenShift by using Red{nbsp}Hat Universal Base Images (UBI).
+      - Manage container images in a container registry by using command line tools.
+      - Create and manage Red{nbsp}Hat OpenShift Image Streams.
+    topics:
+      - keyword: ubi
+        title: Building Container Images for Red{nbsp}Hat OpenShift
+        sections:
+          - type: lecture
+            objectives:
+              - Build Container Images for Red{nbsp}Hat OpenShift by using Red{nbsp}Hat Universal Base Images (UBI).
+          - type: ge
+            objectives:
+              - Build Container Images for Red{nbsp}Hat OpenShift by using Red{nbsp}Hat Universal Base Images (UBI).
+      - keyword: registry
+        title: Managing Container Images in a Registry
+        sections:
+          - type: lecture
+            objectives:
+              - Manage container images in a container registry by using command line tools.
+          - type: ge
+            objectives:
+              - Manage container images in a container registry by using command line tools.
+      - keyword: streams
+        title: Creating Image Streams
+        sections:
+          - type: lecture
+            objectives:
+              - Create and Manage Red{nbsp}Hat OpenShift Image Streams.
+          - type: ge
+            objectives:
+               - Create and manage Red{nbsp}Hat OpenShift Image Streams.
+      - keyword: review
+        title: Building and Publishing Container Images
+        sections:
+          - type: lab
+            objectives:
+              - TBD
+  # CH04
+  - keyword: builds
+    title: Managing Red{nbsp}Hat OpenShift Builds
+    goal: Describe the Red{nbsp}Hat OpenShift build process and build container images.
+    objectives:
+      - Describe the various ways to build and customize images in Red{nbsp}Hat OpenShift.
+      - Configure and manage Red{nbsp}Hat OpenShift builds.
+      - Configure the triggering of automatic builds based on events.
+    topics:
+      - keyword: process
+        title: The Red{nbsp}Hat OpenShift Build Process
+        sections:
+          - type: lecture
+            objectives:
+              - Describe the various ways to build and customize images in Red{nbsp}Hat OpenShift.
+          - type: multichoice
+      - keyword: applications
+        title: Managing Application Builds
+        sections:
+          - type: lecture
+            objectives:
+              - Configure and manage Red{nbsp}Hat OpenShift builds.
+          - type: ge
+            objectives:
+              - Configure and manage Red{nbsp}Hat OpenShift builds.
+      - keyword: triggers
+        title: Triggering Builds
+        sections:
+          - type: lecture
+            objectives:
+              - Configure the triggering of automatic builds based on events.
+          - type: ge
+            objectives:
+               - Configure the triggering of automatic builds based on events.
+      - keyword: review
+        title: Managing Red{nbsp}Hat OpenShift Builds
+        sections:
+          - type: lab
+            objectives:
+              - TBD
+  # CH05
+  - keyword: deployments
+    title: Managing Red{nbsp}Hat OpenShift Deployments
+    goal: Describe the different Red{nbsp}Hat OpenShift deployment strategies and how to monitor the health of applications.
+    objectives:
+      - Describe the various deployment strategies for applications running on Red{nbsp}Hat OpenShift.
+      - Configure and manage application deployments on Red{nbsp}Hat OpenShift.
+      - Configure and manage stateful applications deployed on Red{nbsp}Hat OpenShift.
+      - Monitor the health of applications deployed on Red{nbsp}Hat OpenShift by using readiness and liveness probes.
+    topics:
+      - keyword: strategy
+        title: Selecting the Appropriate Deployment Strategy
+        sections:
+          - type: lecture
+            objectives:
+              - Describe the various deployment strategies for applications running on Red{nbsp}Hat OpenShift.
+          - type: ge
+            objectives:
+              - Describe the various deployment strategies for applications running on Red{nbsp}Hat OpenShift.
+      - keyword: applications
+        title: Managing Application Deployments
+        sections:
+          - type: lecture
+            objectives:
+              - Configure and manage application deployments on Red{nbsp}Hat OpenShift.
+          - type: ge
+            objectives:
+              - Configure and manage application deployments on Red{nbsp}Hat OpenShift.
+      - keyword: stateful
+        title: Deploying Stateful Applications
+        sections:
+          - type: lecture
+            objectives:
+              - Configure and manage stateful applications deployed on Red{nbsp}Hat OpenShift.
+          - type: ge
+            objectives:
+               - Configure and manage stateful applications deployed on Red{nbsp}Hat OpenShift.
+      - keyword: health
+        title: Monitoring Application Health
+        sections:
+          - type: lecture
+            objectives:
+              - Monitor the health of applications deployed on Red{nbsp}Hat OpenShift by using readiness and liveness probes.
+          - type: ge
+            objectives:
+               - Monitor the health of applications deployed on Red{nbsp}Hat OpenShift by using readiness and liveness probes.
+      - keyword: review
+        title: Managing Red{nbsp}Hat OpenShift Deployments
+        sections:
+          - type: lab
+            objectives:
+              - TBD
+  # CH06
+  - keyword: multicontainer
+    title: Deploying Multi-container Applications
+    goal: Deploy multi-container applications by using Red{nbsp}Hat OpenShift Templates, Helm Charts, Kustomize and Devfiles.
+    objectives:
+      - Install multi-container applications by using a template.
+      - Install multi-container applications by using Helm Charts.
+      - Install multi-container applications by using the Kustomize CLI.
+      - Install multi-container applications by using Devfiles.
+    topics:
+      - keyword: templates
+        title: Red{nbsp}Hat OpenShift Templates
+        sections:
+          - type: lecture
+            objectives:
+              - Install multi-container applications by using a template.
+          - type: multichoice
+      - keyword: helm
+        title: Install Applications by Using Helm Charts
+        sections:
+          - type: lecture
+            objectives:
+              - Install multi-container applications by using Helm Charts.
+          - type: ge
+            objectives:
+              - Install multi-container applications by using Helm Charts.
+      - keyword: kustomize
+        title: The Kustomize CLI
+        sections:
+          - type: lecture
+            objectives:
+              - Install multi-container applications by using the Kustomize CLI.
+          - type: ge
+            objectives:
+               - Install multi-container applications by using the Kustomize CLI.
+      - keyword: devfiles
+        title: Using Devfiles for Multi-container Applications
+        sections:
+          - type: lecture
+            objectives:
+              - Install multi-container applications by using Devfiles.
+          - type: ge
+            objectives:
+               - Install multi-container applications by using Devfiles.
+      - keyword: review
+        title: Deploying Multi-container Applications
+        sections:
+          - type: lab
+            objectives:
+              - TBD
+  # CH07
+  - keyword: pipelines
+    title: Continuous Deployment by Using Red{nbsp}Hat OpenShift Pipelines
+    goal: Implement CI/CD Workflows by using Red{nbsp}Hat OpenShift Pipelines
+    objectives:
+      - Describe the architecture and components of Red{nbsp}Hat OpenShift Pipelines.
+      - Create multi-step CI/CD workflows for multi-container applications by using Red{nbsp}Hat OpenShift Pipelines.
+    topics:
+      - keyword: architecture
+        title: Red{nbsp}Hat OpenShift Pipelines Architecture and Components
+        sections:
+          - type: lecture
+            objectives:
+              - Describe the architecture and components of Red{nbsp}Hat OpenShift Pipelines.
+          - type: multichoice
+      - keyword: creation
+        title: Creating CI/CD Workflows by Using Red{nbsp}Hat OpenShift Pipelines
+        sections:
+          - type: lecture
+            objectives:
+              - Create multi-step CI/CD workflows for multi-container applications by using Red{nbsp}Hat OpenShift Pipelines.
+          - type: ge
+            objectives:
+              - Create multi-step CI/CD workflows for multi-container applications by using Red{nbsp}Hat OpenShift Pipelines.
+      - keyword: review
+        title: Continuous Deployment by Using Red{nbsp}Hat OpenShift Pipelines
+        sections:
+          - type: lab
+            objectives:
+              - TBD
+  compreview:
+    topics:
+    - keyword: review
+      title: Comprehensive Review
+      sections:
+        - type: review
+          title: Comprehensive Review
+          objectives:
+            - TBD
+skeleton:
+  repository: git@github.com:RedHatTraining/scaffolding.git
+  revision: 1.2.0

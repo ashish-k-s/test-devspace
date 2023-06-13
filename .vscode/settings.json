@@ -1,0 +1,13 @@
+{
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "vale.valeCLI.config": "/home/jboss/.vale.ini",
+    "vale.valeCLI.path": "/usr/bin/vale",
+    "vale.doNotShowWarningForFileToBeSavedBeforeLinting": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--config=/home/jboss/.flake8"
+    ],
+    "workbench.editorAssociations": {
+        "*.md": "default"
+    }
+}

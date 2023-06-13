@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "asciidoctor.asciidoctor-vscode",
+        "eamodio.gitlens",
+        "sndst00m.vscode-native-svg-preview",
+        "ms-python.python",
+        "errata-ai.vale-server",
+        "shardulm94.trailing-spaces",
+        "redhat.vscode-yaml",
+        "cweijan.vscode-office"
+    ]
+}

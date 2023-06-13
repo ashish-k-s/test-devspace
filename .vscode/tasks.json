@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+			"label": "Open File From Task",
+			"command": "${input:openFileInput}",
+			"type": "shell",
+			"problemMatcher": []
+		},
+        {
+            "label": "Open Student Guide",
+            "command": "${command:custom-open-command}",
+            "type": "shell",
+            "args": [
+                "${input:findPdf}"
+            ],
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Scaffolding Sync",
+            "command": "sk sync",
+            "type": "shell",
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "Scaffolding Flamel",
+            "command": "sk flamel",
+            "type": "shell",
+            "problemMatcher": "$tsc"
+        }
+    ],
+    "inputs": [
+        {
+			"id": "openFileInput",
+			"type": "command",
+			"command": "custom-open-command",
+			"args": "${input:findPdf}"
+		},
+        {
+            "id": "findPdf",
+            "type": "command",
+            "command": "shellCommand.execute",
+            "args": {
+                "command": "ls guides/tmp/en-US/pdf/*.pdf",
+                "useFirstResult": true
+            }
+        }
+    ]
+}
