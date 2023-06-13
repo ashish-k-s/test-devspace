@@ -1,0 +1,15 @@
+
+# Scaffolding
+**/target/**
+.vscode
+.DS_Store
+**/.cache
+**/resources/**
+**/structure/**
+**/guides/tmp/**
+**/guides/**/pubsnum.xml
+!**/translations/**
+
+# Python
+**/.venv/
+
